@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hexgrid</title>
+        <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="libs/bootstrap-icons/font/bootstrap-icons.css" />
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <div id="hexgrid" class="container-lg">
+            <form id="quiz_form">
+                <div class="row">
+
+                    <div class="col-4" id="toolbar">
+                        <div class="btn-toolbar">
+                            <div class="btn-group quiz-type" role="group">
+                                <input type="radio" class="btn-check" name="quiz_type_radio" id="quiz_region" value="1" autocomplete="off" checked />
+                                <label class="btn btn-outline-primary" for="quiz_region">Regions</label>
+
+                                <input type="radio" class="btn-check" name="quiz_type_radio" id="quiz_county" value="2" autocomplete="off" />
+                                <label class="btn btn-outline-primary" for="quiz_county">Counties</label>
+                            </div>
+
+                            <div class="input-group">
+                                <button id="start-quiz" type="button" class="btn btn-primary">Start quiz</button>
+                                <input id="question" class="form-control form-control-lg" type="text" readonly value="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col" id="quiz_status">
+                        <ul class="list-group list-group-horizontal quiz_status_list"></ul>
+                        <span class="badge correct text-bg-success">Correct: 0</span>
+                        <span class="badge wrong text-bg-danger">Wrong: 0</span>
+                    </div>
+                </div>
+            </form>
+
+            <div class="row">
+                <div class="col-12">
+                    <canvas id="hexgrid_screen" tabindex="1"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/hexgrid.js"></script>
+    </body>
+</html>
